@@ -1,4 +1,4 @@
-FROM tomcat:8-jre8
+FROM nginx
 #RUN apt-get update -y
 #RUN apt-get upgrade -y
 #RUN apt-get install git -y
@@ -8,4 +8,4 @@ FROM tomcat:8-jre8
 #RUN cp -rp SampleRegistratonForm/* .
 #RUN rm -rf /usr/local/tomcat/webapps/ROOT
 #COPY ROOT.war /usr/local/tomcat/webapps
-CMD ["catalina.sh", "run"]
+CMD ["nginx", "-g","deamon off;"]
