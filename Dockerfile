@@ -7,5 +7,5 @@ RUN apt-get install unzip -y
 RUN git clone https://github.com/manojazure8071/SampleRegistratonForm.git
 RUN cp -rp SampleRegistratonForm/* .
 #RUN rm -rf /usr/local/tomcat/webapps/ROOT
-COPY cp -rp target/RegistratonFrom.war webapps/ROOT.war
+RUN cp -rp target/RegistratonFrom.war webapps/ROOT.war
 CMD ["catalina.sh", "run"]
